@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { getAllReservations } from '../apicalls';
+import Reservations from '../Reservations/Reservations';
+import Form from '../Form/Form'
 
 class App extends Component {
   constructor() {
@@ -14,6 +16,7 @@ class App extends Component {
     getAllReservations()
     .then(data => {
       console.log(data, "data")
+      this.setState({reservations:data})
     })
   }
 
@@ -24,9 +27,7 @@ class App extends Component {
         <div className='resy-form'>
           <p>Form goes here</p>
         </div>
-        <div className='resy-container'>
-          <p>cards go here</p>
-        </div>
+          <Reservations cards={this.state.reservations}/>
       </div>
     )
   }
