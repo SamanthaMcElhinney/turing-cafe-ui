@@ -39,17 +39,15 @@ class Form extends React.Component {
             />
             <input
               type="text"
-              placeholder="Date"
+              placeholder="Date (mm/d)"
               name="date"
               value={this.state.date}
               onChange={(event) => this.handleChange(event)}
             />
             <input
-              type="time"
+              type="text"
               placeholder="Time"
               name="time"
-              min="09:00"
-              max="18:00"
               value={this.state.time}
               onChange={(event) => this.handleChange(event)}
               required
@@ -64,7 +62,7 @@ class Form extends React.Component {
               onChange={(event) => this.handleChange(event)}
               required
             />
-            <button>Make Reservations</button>
+            <button type="submit" onClick={this.submitValue}>Make Reservations</button>
           </form>
         );
     }
