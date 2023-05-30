@@ -39,7 +39,7 @@ class Form extends React.Component {
             />
             <input
               type="text"
-              placeholder="Date (mm/d)"
+              placeholder="Date (mm/dd)"
               name="date"
               value={this.state.date}
               onChange={(event) => this.handleChange(event)}
