@@ -14,7 +14,6 @@ class App extends Component {
 
   componentDidMount = () => {
     getAllReservations().then((data) => {
-      console.log(data, "data");
       this.setState({ reservations: data });
     });
   };
