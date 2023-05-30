@@ -5,10 +5,10 @@ class Form extends React.Component {
     constructor() {
         super()
         this.state = {
-            name: " ",
-            date: " ",
-            time: " ",
-            numberGuest: " ",
+            name: "",
+            date: "",
+            time: "",
+            numberGuest: "",
         }
     }
 
